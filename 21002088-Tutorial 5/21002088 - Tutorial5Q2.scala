@@ -12,10 +12,13 @@ object demo16 extends App {
   }
   def isPrime(num:Int):Boolean=check(num,num)
 
-  def primeSeq(num:Int): Unit ={
-    for(n <- 2 to num){
-      if(isPrime(n)){
-        printf("%d, ",n)
+  def primeSeq(limit:Int,count:Int=2): Unit ={
+    if(limit>count){
+      if(isPrime(count)){
+        printf("%d, ",count)
+        primeSeq(limit,count=count+1)
+      }else{
+        primeSeq(limit,count=count+1)
       }
     }
   }
