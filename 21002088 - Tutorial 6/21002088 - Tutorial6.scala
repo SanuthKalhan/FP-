@@ -43,9 +43,13 @@ object demo21 extends App {
     decString
   }
 
-  var encW = encrypt("This String is Encrypted")
-  println(s"Encrypted String : ${encW}")
-  println(s"Decrypted String :${decrypt(encW)}")
+  def  Caesar_Cipher(str:String)={
+    var encW:String = encrypt(str)
+    println(s"Encrypted String : ${encW}")
+    println(s"Decrypted String : ${decrypt(encW)}")
+  }
+
+  Caesar_Cipher("This String is Encrypted")
 
 
 }
