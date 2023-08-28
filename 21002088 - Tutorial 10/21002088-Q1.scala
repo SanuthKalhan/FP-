@@ -3,7 +3,7 @@ package com.sanuth.scala
 object demoN34 extends App {
   val input: List[Double] = List(0,10,20,30)
 
-  def avg(para:List[Double]):Unit={
+  def calculateAverage(para:List[Double]):Unit={
     val inputsInCelcius: List[Double] = para.map{input=>
       (input * 9/5) + 32
     }
@@ -13,5 +13,5 @@ object demoN34 extends App {
     println(s"Average Fahrenheit temperature: ${sum/inputsInCelcius.length}")
   }
 
-  avg(input)
+  calculateAverage(input)
 }
